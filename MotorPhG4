@@ -1,0 +1,561 @@
+
+package com.mycompany.motorphpayrollsystem2;
+
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class MotorphPayrollSystem2 {
+
+	public static void main(String[] args) {
+		LocalTime timeIn, timeOut;
+              int[] EmployeeNo = {10001,
+                10002,
+                10003, 
+		10004, 
+		10005,
+		10006,
+		10007, 
+		10008,
+		10009,
+		10010,
+		10011, 
+		10012, 
+		10013, 
+		10014,
+		10015, 
+		10016, 
+		10017, 
+		10018, 
+		10019, 
+		10020, 
+		10021, 
+		10022, 
+		10023, 
+		10024, 
+		10025,};
+              
+             double []hourlyRate = {373.04,
+                255.80,
+                255.80,
+                362.05,
+                133.93,
+                133.93,
+                142.86,
+                142.86,
+                133.93,
+                133.93,
+                229.02,
+                249.11,
+                377.98,
+                138.39,
+                138.39,
+                142.86,
+                133.93,
+                133.93,
+                142.86,
+                147.32,
+                147.32,
+                142.86,
+                133.93,
+                133.93,
+                133.93,};
+	      double totalHours = 0;
+                         
+	      Scanner input = new Scanner(System.in);
+	      // Read the time in and time out for 7 days
+	      for (int i = 1; i <= 7; i++) {
+	         System.out.println("Enter the time in and time out for day " + i + " (format: hh:mm:ss): ");
+	         timeIn = LocalTime.parse(input.next());
+	         timeOut = LocalTime.parse(input.next());
+	         totalHours += timeIn.until(timeOut, ChronoUnit.HOURS);
+	      }
+
+	      // Print the total number of hours worked
+	      System.out.println("The total number of hours worked in a week is: " + totalHours);
+              System.out.println("Calculate Weekly Gross/Net Salary, Please Enter your Employee Number: ");
+              
+              int E = input.nextInt();
+             
+              //Employee Details and Salary Computation
+               if (E== EmployeeNo[0]){
+                  
+                  System.out.println("Employee Number : 10001"); 
+                  System.out.println("Name            : Jose Crisostomo"); 
+                  System.out.println("Birthdate       : 02/14/1988");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [0]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 1000");
+                  System.out.println("Clothing Allow. : 1000");
+                  System.out.println("TOTAL           : 3500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 940.05");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 7934.39");
+                  System.out.println("TOTAL DEDUCTIONS: 10099.44");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [0]*totalHours-10099.44+3500);
+              }
+               else if (E== EmployeeNo[1]){
+                   
+                  System.out.println("Employee Number : 10002"); 
+                  System.out.println("Name            : Christian Mata"); 
+                  System.out.println("Birthdate       : 10/21/1987");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [1]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 800");
+                  System.out.println("Clothing Allow. : 800");
+                  System.out.println("TOTAL           : 3100");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 644.25");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 4054.55");
+                  System.out.println("TOTAL DEDUCTIONS: 5923.8");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [1]*totalHours-5923.8+3100);
+              }
+               else if (E== EmployeeNo[2]){
+                  System.out.println("Employee Number : 10003"); 
+                  System.out.println("Name            : Brad San Jose"); 
+                  System.out.println("Birthdate       : 03/15/1996");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [2]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 800");
+                  System.out.println("Clothing Allow. : 800");
+                  System.out.println("TOTAL           : 3100");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 644.25");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 4054.55");
+                  System.out.println("TOTAL DEDUCTIONS: 5923.8");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [2]*totalHours-5923.8+3100);
+              }
+               else if (E== EmployeeNo[3]){
+                  System.out.println("Employee Number : 10004"); 
+                  System.out.println("Name            : Anthony Salcedo"); 
+                  System.out.println("Birthdate       : 09/14/1993");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [3]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 1000");
+                  System.out.println("Clothing Allow. : 1000");
+                  System.out.println("TOTAL           : 3500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 912.375");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 7570");
+                  System.out.println("TOTAL DEDUCTIONS: 9707.375");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [3]*totalHours-9707.375+3500);
+              }
+               else if (E== EmployeeNo[4]){
+                  System.out.println("Employee Number : 10005"); 
+                  System.out.println("Name            : Alice Romualdez"); 
+                  System.out.println("Birthdate       : 05/14/1992");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [4]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [4]*totalHours-1493.15+2500);
+              }
+               else if (E== EmployeeNo[5]){
+                  System.out.println("Employee Number : 10006"); 
+                  System.out.println("Name            : Rosie Atienza"); 
+                  System.out.println("Birthdate       : 09/24/1948");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [5]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [5]*totalHours-1493.15+2500);
+              }
+               else if (E== EmployeeNo[6]){
+                  System.out.println("Employee Number : 10007"); 
+                  System.out.println("Name            : Martha Farala"); 
+                  System.out.println("Birthdate       : 01/11/1942");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [6]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,080.00");
+                  System.out.println("Philhealth      : 360");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 325.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1865.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [6]*totalHours-1865.4+2500);
+              }
+               else if (E== EmployeeNo[7]){
+                  System.out.println("Employee Number : 10008"); 
+                  System.out.println("Name            : Leila Martinez"); 
+                  System.out.println("Birthdate       : 07/11/1970");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [7]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,080.00");
+                  System.out.println("Philhealth      : 360");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 325.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1865.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [7]*totalHours-1865.4+2500);
+              }
+               else if (E== EmployeeNo[8]){
+                  System.out.println("Employee Number : 10009"); 
+                  System.out.println("Name            : Allison San Jose"); 
+                  System.out.println("Birthdate       : 06/24/1986");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [8]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [8]*totalHours-1493.15+2500);
+              }
+               else if (E== EmployeeNo[9]){
+                  System.out.println("Employee Number : 10010"); 
+                  System.out.println("Name            : Cydney Rosario"); 
+                  System.out.println("Birthdate       : 10/06/1996");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [9]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [9]*totalHours-1493.15+2500);
+              }
+               else if (E== EmployeeNo[10]){
+                  System.out.println("Employee Number : 10011"); 
+                  System.out.println("Name            : Josie Lopez"); 
+                  System.out.println("Birthdate       : 01/14/1937");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [10]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 800");
+                  System.out.println("Clothing Allow. : 800");
+                  System.out.println("TOTAL           : 3100");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 577.125");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 3167.975");
+                  System.out.println("TOTAL DEDUCTIONS: 4970.1");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [10]*totalHours-4970.1+3100);
+              }
+               else if (E== EmployeeNo[11]){
+                  System.out.println("Employee Number : 10012"); 
+                  System.out.println("Name            : Selena De Leon"); 
+                  System.out.println("Birthdate       : 02/20/1945");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [11]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 800");
+                  System.out.println("Clothing Allow. : 800");
+                  System.out.println("TOTAL           : 3100");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 627.75");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 3832.85");
+                  System.out.println("TOTAL DEDUCTIONS: 5685.6");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [11]*totalHours-5685.6+3100);
+              }
+               else if (E== EmployeeNo[12]){
+                  System.out.println("Employee Number : 10013"); 
+                  System.out.println("Name            : Fredrick Romualdez"); 
+                  System.out.println("Birthdate       : 03/10/1985");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [12]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 1000");
+                  System.out.println("Clothing Allow. : 1000");
+                  System.out.println("TOTAL           : 3500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 952.75");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 8097.85");
+                  System.out.println("TOTAL DEDUCTIONS: 10275.6");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [12]*totalHours-10275.6+3500);
+              }
+               else if (E== EmployeeNo[13]){
+                  System.out.println("Employee Number : 10014"); 
+                  System.out.println("Name            : Mark Bautista"); 
+                  System.out.println("Birthdate       : 02/12/1961");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [13]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 1500");
+                  System.out.println("Phone Allowance : 500");
+                  System.out.println("Clothing Allow. : 500");
+                  System.out.println("TOTAL           : 2500");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,057.50");
+                  System.out.println("Philhealth      : 348.75");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 182.15");
+                  System.out.println("TOTAL DEDUCTIONS: 1688.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [13]*totalHours-1688.4+2500);
+              }
+               else if (E== EmployeeNo[14]){
+                  System.out.println("Employee Number : 10015"); 
+                  System.out.println("Name            : Darlene Lazaro"); 
+                  System.out.println("Birthdate       : 11/25/1985");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [14]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,057.50");
+                  System.out.println("Philhealth      : 348.75");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 182.15");
+                  System.out.println("TOTAL DEDUCTIONS: 1688.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [14]*totalHours-1688.4);
+              }
+               else if (E== EmployeeNo[15]){
+                  System.out.println("Employee Number : 10016"); 
+                  System.out.println("Name            : Kolby Delos Santos"); 
+                  System.out.println("Birthdate       : 02/26/1980");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [15]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,080.00");
+                  System.out.println("Philhealth      : 360");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 325.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1865.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [15]*totalHours-1865.4);
+              }
+               else if (E== EmployeeNo[16]){
+                  System.out.println("Employee Number : 10017"); 
+                  System.out.println("Name            : Vella Santos"); 
+                  System.out.println("Birthdate       : 12/31/1983");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [16]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [16]*totalHours-1493.15);
+              }
+               else if (E== EmployeeNo[17]){
+                  System.out.println("Employee Number : 10018"); 
+                  System.out.println("Name            : Tomas Del Rosario"); 
+                  System.out.println("Birthdate       : 12/18/1978");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [17]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [17]*totalHours-1493.15);
+              }
+               else if (E== EmployeeNo[18]){
+                  System.out.println("Employee Number : 10019"); 
+                  System.out.println("Name            : Jacklyn Tolentino"); 
+                  System.out.println("Birthdate       : 05/19/1944");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [18]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,080.00");
+                  System.out.println("Philhealth      : 360");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 325.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1865.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [18]*totalHours-1865.4);
+              }
+               else if (E== EmployeeNo[19]){
+                  System.out.println("Employee Number : 10020"); 
+                  System.out.println("Name            : Percival Gutierrez"); 
+                  System.out.println("Birthdate       : 12/18/1970");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [19]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 371.25");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 464.15");
+                  System.out.println("TOTAL DEDUCTIONS: 2060.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [19]*totalHours-2060.4);
+              }
+               else if (E== EmployeeNo[20]){
+                  System.out.println("Employee Number : 10021"); 
+                  System.out.println("Name            : Garfield Manalaysay"); 
+                  System.out.println("Birthdate       : 08/28/1966");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [20]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,125.00");
+                  System.out.println("Philhealth      : 371.25");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 464.15");
+                  System.out.println("TOTAL DEDUCTIONS: 2060.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [20]*totalHours-2060.4);
+              }
+               else if (E== EmployeeNo[21]){
+                  System.out.println("Employee Number : 10022"); 
+                  System.out.println("Name            : Lizeth Villegas"); 
+                  System.out.println("Birthdate       : 12/12/1981");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [21]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,080.00");
+                  System.out.println("Philhealth      : 360");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 325.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1865.4");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [21]*totalHours-1865.4);
+              }
+               else if (E== EmployeeNo[22]){
+                  System.out.println("Employee Number : 10023"); 
+                  System.out.println("Name            : Carol Ramos"); 
+                  System.out.println("Birthdate       : 08/20/1978");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [22]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [22]*totalHours-1493.15);
+              }
+               else if (E== EmployeeNo[23]){
+                  System.out.println("Employee Number : 10024"); 
+                  System.out.println("Name            : Emelia Maceda"); 
+                  System.out.println("Birthdate       : 04/14/1963");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [23]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [23]*totalHours-1493.15);
+              }
+               else if (E== EmployeeNo[24]){
+                  System.out.println("Employee Number : 10025"); 
+                  System.out.println("Name            : Delia Aguilar"); 
+                  System.out.println("Birthdate       : 01/27/1939");
+                  System.out.println("Your total weekly gross salary based on hours worked : "+hourlyRate [24]*totalHours);
+                  System.out.println("ALLOWANCES      :");
+                  System.out.println("Rice Subsidy    : 0");
+                  System.out.println("Phone Allowance : 0");
+                  System.out.println("Clothing Allow. : 0");
+                  System.out.println("TOTAL           : 0");
+                  System.out.println("DEDUCTIONS      :");
+                  System.out.println("SSS             : 1,012.25");
+                  System.out.println("Philhealth      : 337.5");
+                  System.out.println("Pagibig         : 100");
+                  System.out.println("Withholding Tax : 43.4");
+                  System.out.println("TOTAL DEDUCTIONS: 1493.15");
+                  System.out.println("Your total weekly net salary : ");
+                  System.out.println(hourlyRate [24]*totalHours-1493.15);
+              }
+               else {System.out.println("Invalid Employee Number");}
+        }
+             
+	}
