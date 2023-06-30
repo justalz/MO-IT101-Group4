@@ -20,6 +20,7 @@ public class MotorphPayrollSystem2 {
 	      double totalHours = 0;
                          
 	      Scanner input = new Scanner(System.in);
+
 	      // Read the time in and time out for 7 days
 	      for (int i = 1; i <= 7; i++) {
 	         System.out.println("Enter the time in and time out for day " + i + " (format: hh:mm:ss): ");
