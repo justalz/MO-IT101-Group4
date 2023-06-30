@@ -1,5 +1,4 @@
-
-package com.mycompany.motorphpayrollsystem2;
+//Group 4//
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -9,57 +8,15 @@ public class MotorphPayrollSystem2 {
 
 	public static void main(String[] args) {
 		LocalTime timeIn, timeOut;
-              int[] EmployeeNo = {10001,
-                10002,
-                10003, 
-		10004, 
-		10005,
-		10006,
-		10007, 
-		10008,
-		10009,
-		10010,
-		10011, 
-		10012, 
-		10013, 
-		10014,
-		10015, 
-		10016, 
-		10017, 
-		10018, 
-		10019, 
-		10020, 
-		10021, 
-		10022, 
-		10023, 
-		10024, 
-		10025,};
-              
-             double []hourlyRate = {373.04,
-                255.80,
-                255.80,
-                362.05,
-                133.93,
-                133.93,
-                142.86,
-                142.86,
-                133.93,
-                133.93,
-                229.02,
-                249.11,
-                377.98,
-                138.39,
-                138.39,
-                142.86,
-                133.93,
-                133.93,
-                142.86,
-                147.32,
-                147.32,
-                142.86,
-                133.93,
-                133.93,
-                133.93,};
+
+              //employee numbers
+              int[] EmployeeNo = {10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,10011,10012,10013,10014,10015,10016,10017,10018, 
+		10019,10020,10021,10022,10023,10024,10025,};
+
+	     //hourly rates
+             double []hourlyRate = {373.04,255.80,255.80,362.05,133.93,133.93,142.86,142.86,133.93,133.93,229.02,249.11,377.98,138.39,138.39,142.86,
+                133.93,133.93,142.86,147.32,147.32,142.86,133.93,133.93,133.93,};
+
 	      double totalHours = 0;
                          
 	      Scanner input = new Scanner(System.in);
@@ -76,7 +33,7 @@ public class MotorphPayrollSystem2 {
               System.out.println("Calculate Weekly Gross/Net Salary, Please Enter your Employee Number: ");
               
               int E = input.nextInt();
-             
+              input.close();
               //Employee Details and Salary Computation
                if (E== EmployeeNo[0]){
                   
